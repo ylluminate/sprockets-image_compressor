@@ -3,8 +3,6 @@ module Sprockets
     class Railtie < Rails::Engine
       initializer :setup_image_compressors do |app|
         puts "Inside: ${__FILE__}"        
-        logger.info "Inside: ${__FILE__}"
-        logger.error "Inside: ${__FILE__}"
         Integration.setup app.assets if app.config.assets.compress
       end
     end
